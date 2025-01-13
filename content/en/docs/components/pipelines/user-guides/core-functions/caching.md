@@ -58,19 +58,18 @@ client.create_run_from_pipeline_func(
 )
 ```
 
-## Upcoming caching enhancement
-
-Once it is released, KFP SDK v2.10.0 will provide the following caching enhancement:
-
 The `--disable-execution-caching-by-default` flag disables caching for all pipeline tasks by default.
 
 Example:
+
 ```
 kfp dsl compile --py my_pipeline.py --output my_pipeline.yaml --disable-execution-caching-by-default
 ```
 
-You can also set the default caching behavior by using the `KFP_DISABLE_EXECUTION_CACHING_BY_DEFAULT` environment variable. When set to true, 1, or other truthy values, it will disable execution caching by default for all pipelines. When set to false or when absent, the default of caching enabled remains.\
+You can also set the default caching behavior using the `KFP_DISABLE_EXECUTION_CACHING_BY_DEFAULT` environment variable. When set to `true`, `1`, or other truthy values, it will disable execution caching by default for all pipelines. When set to `false` or when absent, the default of caching enabled remains.
+
 Example:
+
 ```
 KFP_DISABLE_EXECUTION_CACHING_BY_DEFAULT=true \
 kfp dsl compile --py my_pipeline.py --output my_pipeline.yaml
@@ -88,9 +87,10 @@ def my_pipeline():
 Compiler().compile(
     pipeline_func=my_pipeline,
     package_path='my_pipeline.yaml',
+
 )
 ```
-Executing this
+Executing the following:
 ```
 KFP_DISABLE_EXECUTION_CACHING_BY_DEFAULT=true \
 python my_pipeline.py

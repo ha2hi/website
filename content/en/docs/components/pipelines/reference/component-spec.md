@@ -57,7 +57,7 @@ This section describes the
 
     * `annotations`: A string key-value map used to add information about the component.
         Currently, the annotations get translated to Kubernetes annotations when the component task is executed on Kubernetes. Current limitation: the key cannot contain more that one slash ("/"). See more information in the
-        [Kubernetes user guide](https://kubernetes.io/docs/user-guide/annotations).
+        [Kubernetes user guide](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/).
     * `labels`: Deprecated. Use `annotations`.
 
 ### Interface
@@ -91,7 +91,7 @@ This section describes the
     * `container`:
         Describes the Docker container that implements the component. A portable 
         subset of the Kubernetes
-        [Container v1 spec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.12/#container-v1-core).
+        [Container v1 spec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/#container-v1-core).
 
         * `image`: Name of the Docker image.
         * `command`: Entrypoint array. The Docker image's
